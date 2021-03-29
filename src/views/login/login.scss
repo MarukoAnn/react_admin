@@ -1,0 +1,40 @@
+.login {
+    height: 100vh;
+    width: 100vw;
+    // background-color: aqua;
+    background: url('../../assets/images/login-bg.jpg') no-repeat center center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .from {
+        height: 400px;
+        width: 500px;
+        background: rgba(255,255,255,0.3);
+        // box-shadow: 0 0 12px #ddd;
+        border-radius: 10px;
+        padding: 2vw;
+
+
+        .lf-title {
+            padding-bottom: 1vh;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1vh;
+            h2 {
+                color: #F5F7FA;
+            }
+        }
+        .lf-content {
+            margin-top: 4vh;
+            
+            .check {
+                margin-left: 16px;
+            }
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

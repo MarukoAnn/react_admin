@@ -1,0 +1,36 @@
+@import 'src/assets/style/common.scss';
+.header {
+    height: 8vh;
+    // background-color: chocolate;
+    background-color: #242F42;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    .header-left {
+        // line-height: 6vh;
+        padding: 0 2vw;
+        height: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        color: #fff;
+        h2{
+            color: #fff;
+            margin-top: 1vh;
+            padding: 0 1vw;
+            vertical-align: text-bottom;
+        }
+    }
+    .header-right {
+        flex: 1;
+        color: #fff;
+        @include center;
+        justify-content: flex-end;
+        margin-right: 1vw;
+        .icon {
+            font-size: 18px;
+            padding-right: 1vw;
+        }
+    }
+}
