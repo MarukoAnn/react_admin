@@ -1,10 +1,9 @@
 // const Index = React
 
 import { Component } from "react";
-import {HashRouter, Route, Redirect, Switch} from 'react-router-dom'
+import {HashRouter, Route, Redirect} from 'react-router-dom'
 import Login from '../views/login/login';
 import Home from '../views/home/home';
-import Main from '../views/common/main/main'
 class Index extends Component{
 
     render(){

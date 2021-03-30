@@ -17,8 +17,8 @@ module.exports = override(
         config.output.path = paths.appBuild;
 
         // 配置访问子目录 /web-admin/
-        paths.publicUrlOrPath = '/web-admin/';
-        config.output.publicPath = '/web-admin/';
+        // paths.publicUrlOrPath = '/web-admin/';
+        // config.output.publicPath = '/web-admin/';
 
         return config;
     }

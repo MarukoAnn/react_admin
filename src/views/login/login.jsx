@@ -2,7 +2,6 @@ import {Component} from 'react'
 import './login.scss'
 import { Form, Input, Button, Checkbox } from 'antd';
 class Login extends Component {
-
     constructor(props){
         super(props)
         this.state = {

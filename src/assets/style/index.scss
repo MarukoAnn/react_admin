@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+            monospace;
+    }
+    /* 全局侧边导航栏的样式 */
+    .ant-menu .ant-menu-item,
+    .ant-menu .ant-menu-submenu .ant-menu-item {
+        // background-color: #324157;
+        height: 56px;
+        line-height: 56px;
+    }
+}
+
+
