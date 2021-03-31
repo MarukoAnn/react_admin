@@ -1,43 +1,67 @@
 
 import {Component} from 'react';
-import {Tabs} from 'antd'
-import {Link} from 'react-router-dom'
+import {CloseOutlined} from '@ant-design/icons'
+import {Link, withRouter} from 'react-router-dom'
 import './tags.scss'
-const {TabPane} = Tabs;
+import store from '../../store'
+import {REMOVE_TAG_LIST, SET_ROUTER} from '../../store/actions'
 class Tags extends Component{
 
     constructor(props){
         super(props);
         this.state = {
-            tagList: [
-                {key: '1', label: '首页', link: '/home/main'},
-                {key: '2', label: '基础表格', link: '/home/table'},
-                {key: '3', label: 'tab选项卡', link: '/home/table'},
-                {key: '4', label: '表单相关', link: '/home/table'}
-            ]
+            tagList:  store.getState().tagList,
+            active: store.getState().active
         }
+        store.subscribe(this.storeChange)
+    }
+    
+     /* 监听stroe状态改变 */
+    storeChange = () => {
+        this.setState({
+            active: store.getState().active,
+            tagList: store.getState().tagList
+        })
+    }
+		// 删除tag
+    c_removeTags = (index) => {
+        // let list = this.state.tagList;
+        // list.splice(index, 1);
+        let action = {
+            type: REMOVE_TAG_LIST,
+            value: index
+        }
+        store.dispatch(action);
+        console.log(this.state.tagList[index -1].link)
+        this.props.history.goBack();
+        console.log(this.props.history)
+
+    }
+    c_changeTagActive = (item) => {
+        console.log(item.openKeys)
+        store.dispatch({type: SET_ROUTER, value: {key: item.key, openKeys: item.openKeys}});
     }
 
     render(){
         return (
             <div className="tags">
-                <Tabs
-                
-                >
+                <ul>
                     {
-                        this.state.tagList.map(val => {
+                        this.state.tagList.map((val, index) => {
                             return (
-                                <TabPane tab={val.label} key={val.key}>
-                                    {/* <Link to={val.link}>{val.label}</Link> */}
-                                    
-                                </TabPane>
+                                <li key={index} onClick={() => this.c_changeTagActive(val)}>
+                                    <Link to={val.link}>
+                                        <span>{val.label}</span>
+                                        <span ><CloseOutlined onClick = {() => {this.c_removeTags(index)}} /></span>
+                                    </Link>
+                                </li>
                             )
                         })
                     }
-                </Tabs>
+                </ul>
             </div>
         )
     }
 } 
 
-export default Tags;
+export default withRouter(Tags);

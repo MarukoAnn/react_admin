@@ -23,7 +23,8 @@ class Headers extends Component{
         }
     }
 
-    viewMenu = (
+
+	viewMenu = (
         <Menu onClick={({key}) => {this.c_menusClick(key)}}>
             <Menu.Item key="1">项目仓库</Menu.Item>
             <Menu.Item key="2">退出登录</Menu.Item>
@@ -33,8 +34,12 @@ class Headers extends Component{
     c_menusClick = (key) => {
         console.log(this.props);
         switch(key){
-            case '1': window.open('https://github.com/moonshinean/react_admin');break;
-            case '2': this.props.history.push('/login');break;
+            case '1':
+            	window.open('https://github.com/moonshinean/react_admin');
+            	break;
+            case '2':
+            	this.props.history.push('/login');
+            	break;
             default:
                 break;
         }
