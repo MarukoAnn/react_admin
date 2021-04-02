@@ -26,7 +26,7 @@ class Sidebar extends Component{
                     {label: '文件上传',key: '4-3', link: '/home/file'},
                 ]},
                 {label: '自定义图标', key: '5', link: '/home/table', icon: 'DesktopOutlined'},
-                {label: 'eChart图表', key: '6', link: '/home/table', icon: 'DesktopOutlined'},
+                {label: 'eChart图表', key: '6', link: '/home/echart', icon: 'DesktopOutlined'},
             ],
             active: '1',
             openKeys: [],

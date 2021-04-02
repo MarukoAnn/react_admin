@@ -7,6 +7,7 @@ import BasicTable from '../views/common/table/table'
 import Tab from '../views/common/tab/tab'
 import BasicInput from '../views/common/input/basic/basic'
 import FileUpload from '../views/common/input/file/file'
+import EChart from  '../views/common/echart/echart'
 class HomeRoute extends Component{
 
     render(){
@@ -18,6 +19,7 @@ class HomeRoute extends Component{
 								<Route path="/home/tab" component={Tab} />
 								<Route path="/home/input" component={BasicInput} />
 								<Route path="/home/file" component={FileUpload} />
+								<Route path="/home/echart" component={EChart} />
             </div>
         )
     }

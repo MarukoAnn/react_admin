@@ -13,32 +13,50 @@ class Tags extends Component{
             tagList:  store.getState().tagList,
             active: store.getState().active
         }
-        store.subscribe(this.storeChange)
+        store.subscribe(this.storeChanges)
     }
     
      /* 监听stroe状态改变 */
-    storeChange = () => {
+    storeChanges = () => {
         this.setState({
             active: store.getState().active,
             tagList: store.getState().tagList
         })
+			console.log('active变化:' + this.state.active);
     }
 		// 删除tag
     c_removeTags = (index) => {
-        // let list = this.state.tagList;
-        // list.splice(index, 1);
         let action = {
             type: REMOVE_TAG_LIST,
             value: index
         }
         store.dispatch(action);
-        console.log(this.state.tagList[index -1].link)
-        this.props.history.goBack();
-        console.log(this.props.history)
+        console.log('提交数据了');
+        console.log(index);
+        console.log(this.state.active);
+				if (index === 0 && this.state.tagList.length === 1){
+					this.props.history.push('/home/main');
+					return;
+				}
+				console.log(this.state.tagList);
+				if(this.state.tagList[index].key === this.state.active){
+				setTimeout(() => {
+					console.log(this.state.tagList);
+					console.log("index: " + index);
+					console.log("active: " + this.state.active);
+					console.log('是当前的');
+					this.props.history.push(this.state.tagList[this.state.tagList.length - 1].link)
+					// if (index + 1 >= this.state.tagList.length){
+					// 	this.props.history.goBack();
+					// }else {
+					// 	console.log(this.state.tagList[this.state.tagList.length - 1].link);
+					// }
+				})
+			}
 
-    }
+
+		}
     c_changeTagActive = (item) => {
-        console.log(item.openKeys)
         store.dispatch({type: SET_ROUTER, value: {key: item.key, openKeys: item.openKeys}});
     }
 
@@ -52,9 +70,9 @@ class Tags extends Component{
                                 <li key={index} onClick={() => this.c_changeTagActive(val)}>
                                     <Link to={val.link}>
                                         <span>{val.label}</span>
-                                        <span ><CloseOutlined onClick = {() => {this.c_removeTags(index)}} /></span>
                                     </Link>
-                                </li>
+																		<span ><CloseOutlined onClick = {(e) => {e.stopPropagation();this.c_removeTags(index)}} /></span>
+																</li>
                             )
                         })
                     }

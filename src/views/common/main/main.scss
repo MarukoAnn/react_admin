@@ -1,3 +1,62 @@
+@import '../../../assets/style/common';
 .main {
-    // text-align: left;
+   background: #F0F0F0;
+   padding: 10px;
+  .user-info {
+    display: flex;
+    align-items: center;
+    .info {
+      margin-left: 2vw;
+      span{
+        display: block;
+      }
+      span:first-child{
+       font-size: 30px;
+        font-weight: bold;
+      }
+       span:last-child {
+         color: #999;
+       }
+    }
+  }
+  .login-time, .login-address {
+    color: #999;
+    text-align: left;
+    margin-bottom: 10px;
+    span{
+      margin-left: 4vw;
+    }
+  }
+  .statis-num{
+    display: flex;
+    background: #fff;
+    border-radius: 4px;
+    //justify-content: space-between;
+    .sn-left{
+      width: 5vw;
+      height: 9vh;
+      @include center;
+      border-radius: 4px;
+    }
+    .sn-right {
+      flex: 1;
+      @include center;
+      flex-direction: column;
+      span:first-child{
+        color: #2D8CF0;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      span:last-child{
+        color: #999;
+      }
+    }
+    &:hover{
+      box-shadow: 1px 1px  12px #989898;
+    }
+  }
+  Row {
+    padding: 0;
+    margin: 0;
+  }
 }

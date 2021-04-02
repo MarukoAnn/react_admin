@@ -35,7 +35,7 @@ class Home extends Component{
             <div className="home">
                 <Headers />
                 <Sidebar />
-                <div className="main" style={{marginLeft: !this.state.collapsed? '250px': '80px'}}>
+                <div className="body" style={{marginLeft: !this.state.collapsed? '250px': '80px'}}>
                     <Tags />
                     <HomeRoute />
                 </div>
