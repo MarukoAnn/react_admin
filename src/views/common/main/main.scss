@@ -1,7 +1,7 @@
 @import '../../../assets/style/common';
 .main {
    background: #F0F0F0;
-   padding: 10px;
+   padding: 10px 1vw;
   .user-info {
     display: flex;
     align-items: center;
@@ -27,35 +27,43 @@
       margin-left: 4vw;
     }
   }
-  .statis-num{
-    display: flex;
-    background: #fff;
-    border-radius: 4px;
-    //justify-content: space-between;
-    .sn-left{
-      width: 5vw;
-      height: 9vh;
-      @include center;
+  .tab-card{
+    Col {
+      padding-left: 10px;
+    }
+    Col:last-child{
+      padding: 0;
+    }
+    .statis-num{
+      display: flex;
+      background: #fff;
       border-radius: 4px;
-    }
-    .sn-right {
-      flex: 1;
-      @include center;
-      flex-direction: column;
-      span:first-child{
-        color: #2D8CF0;
-        font-size: 30px;
-        font-weight: bold;
+      .sn-left{
+        width: 5vw;
+        height: 12vh;
+        @include center;
+        border-radius: 4px;
       }
-      span:last-child{
-        color: #999;
+      .sn-right {
+        flex: 1;
+        @include center;
+        flex-direction: column;
+        span:first-child{
+          color: #2D8CF0;
+          font-size: 30px;
+          font-weight: bold;
+        }
+        span:last-child{
+          color: #999;
+        }
       }
-    }
-    &:hover{
-      box-shadow: 1px 1px  12px #989898;
+      &:hover{
+        box-shadow: 1px 1px  12px #989898;
+      }
     }
   }
-  Row {
+
+  Row, Col {
     padding: 0;
     margin: 0;
   }

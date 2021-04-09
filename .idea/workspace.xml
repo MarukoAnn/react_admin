@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7fc9e3-74b6-404d-8e13-efa1547d62af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/common/echart/echart.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/common/echart/echart.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tags/tags.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tags/tags.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/tags/tags.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tags/tags.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/homeRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/homeRoute.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/common/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common/main/main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/common/main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common/main/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/sidebar/sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/sidebar/sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/lenu_project/前端源码管理/PC助手客户端" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../开源库/vue-manage-system" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,6 +49,23 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,7 +79,9 @@
       <workItem from="1617106379321" duration="217000" />
       <workItem from="1617178973179" duration="3049000" />
       <workItem from="1617249358445" duration="1576000" />
-      <workItem from="1617280184674" duration="16316000" />
+      <workItem from="1617280184674" duration="17336000" />
+      <workItem from="1617671629401" duration="849000" />
+      <workItem from="1617958629344" duration="4809000" />
     </task>
     <task id="LOCAL-00001" summary="操作日志：&#10;  (1)、头部添加&#10;  (2)、侧边导航栏添加">
       <created>1617106561392</created>
@@ -88,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617181376318</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="操作日志：&#10;  (1)、首页信息搭建&#10;  (2)、tag标签问题处理">
+      <created>1617357701454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617357701454</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +113,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="操作日志：&#10;  (1)、头部添加&#10;  (2)、侧边导航栏添加" />
     <MESSAGE value="操作日志：&#10;  (1)、标签tag添加" />
-    <option name="LAST_COMMIT_MESSAGE" value="操作日志：&#10;  (1)、标签tag添加" />
+    <MESSAGE value="操作日志：&#10;  (1)、首页信息搭建&#10;  (2)、tag标签问题处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="操作日志：&#10;  (1)、首页信息搭建&#10;  (2)、tag标签问题处理" />
   </component>
 </project>

@@ -1,9 +1,59 @@
 import { Component } from "react";
 import './main.scss'
-import {Row, Col, Card, Avatar, Divider, Progress  } from 'antd'
-import {UserSwitchOutlined, AlertOutlined, SoundOutlined} from '@ant-design/icons'
+import {Row, Col, Card, Avatar, Divider, Progress, Table} from 'antd'
+import {UserSwitchOutlined, AlertOutlined, SoundOutlined, ContainerOutlined, AppstoreOutlined} from '@ant-design/icons'
 import userLogo from '../../../assets/images/img.jpg'
-
+const columns = [
+	{
+		title: 'Name',
+		dataIndex: 'name',
+		render: (text) => <a>{text}</a>,
+	},
+	{
+		title: 'Age',
+		dataIndex: 'age',
+	},
+	{
+		title: 'Address',
+		dataIndex: 'address',
+	},
+];
+const data = [
+	{
+		key: '1',
+		name: 'John Brown',
+		age: 32,
+		address: 'New York No. 1 Lake Park',
+	},
+	{
+		key: '2',
+		name: 'Jim Green',
+		age: 42,
+		address: 'London No. 1 Lake Park',
+	},
+	{
+		key: '3',
+		name: 'Joe Black',
+		age: 32,
+		address: 'Sidney No. 1 Lake Park',
+	},
+	{
+		key: '4',
+		name: 'Disabled User',
+		age: 99,
+		address: 'Sidney No. 1 Lake Park',
+	},
+];
+const rowSelection = {
+	onChange: (selectedRowKeys, selectedRows) => {
+		console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+	},
+	getCheckboxProps: (record) => ({
+		disabled: record.name === 'Disabled User',
+		// Column configuration not to be checked
+		name: record.name,
+	}),
+};
 class Main extends Component{
 		constructor(props) {
 			super(props);
@@ -35,6 +85,7 @@ class Main extends Component{
 
 	}
 
+
 	getIconView = (value) => {
 		switch (value){
 			case 'UserSwitchOutlined':
@@ -51,8 +102,8 @@ class Main extends Component{
         return (
             <div className="main">
 				<Row>
-					<Col span={7}>
-						<Card  hoverable bordered={true} style={{ width: '26vw', borderRadius: 4 }}>
+					<Col span={8} style={{paddingRight: '10px'}}>
+						<Card  hoverable bordered={true} style={{borderRadius: 4 }}>
 							<div className="user-info">
 								<Avatar src={this.state.imgUrl} size={120} />
 								<div className="info">
@@ -70,19 +121,19 @@ class Main extends Component{
 								<span>广州</span>
 							</p>
 						</Card>
-						<Card  hoverable title="语言详情" bordered={true} style={{ width: '26vw', borderRadius: 4 ,marginTop: '1vh',textAlign: 'left'}}>
+						<Card  hoverable title="语言详情" bordered={true} style={{borderRadius: 4 ,marginTop: '1vh',textAlign: 'left'}}>
 							{
 								this.progressView()
 							}
 						</Card>
 					</Col>
-					<Col span={16} style={{marginLeft: '2vw'}}>
-						<div style={{display: 'flex'}}>
+					<Col span={16}>
+						<Row className="tab-card">
 							{
 								this.state.staisList.map((item, index) => {
 									return (
-										<div span={7} key={index} style={{margin: '2px 10px', flex: '1'}}>
-											<div className="statis-num">
+										<Col span={8} key={index}>
+											<div className="statis-num" style={{marginRight: index !==this.state.staisList.length -1?'10px': ''}}>
 												<div className="sn-left" style={{background: item.color}}>
 													{
 														this.getIconView(item.icon)
@@ -93,13 +144,27 @@ class Main extends Component{
 													<span>{item.label}</span>
 												</div>
 											</div>
-										</div>
+										</Col>
 									)
 								})
 							}
-						</div>
-					</Col>
+						</Row>
+						<Row>
+							<Card  hoverable title="待办事项" bordered={true} style={{ width: '100%', height: '464px', borderRadius: 4 ,marginTop: '1vh',textAlign: 'left'}}
+							       extra={<span style={{color: '#409EFF'}}>添加</span>} >
+								{
+									<Table
+										rowSelection={{
+											...rowSelection,
+										}}
+										columns={columns}
+										dataSource={data}
+									/>
+								}
+							</Card>
+						</Row>
 
+					</Col>
 				</Row>
             </div>
         )
