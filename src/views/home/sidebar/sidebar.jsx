@@ -91,6 +91,7 @@ class Sidebar extends Component{
     // 设置导航的Icon
     setIconView = (icon) => {
         let iconView = null;
+        // eslint-disable-next-line default-case
         switch(icon) {
             case 'MailOutlined':
             	iconView = <MailOutlined />;

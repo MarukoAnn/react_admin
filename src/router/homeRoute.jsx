@@ -13,13 +13,13 @@ class HomeRoute extends Component{
     render(){
         return (
             <div>
-								<Redirect from="/home" to="/home/main" />
-								<Route path="/home/main" component={Main} />
-								<Route path="/home/table" component={BasicTable} />
-								<Route path="/home/tab" component={Tab} />
-								<Route path="/home/input" component={BasicInput} />
-								<Route path="/home/file" component={FileUpload} />
-								<Route path="/home/echart" component={EChart} />
+				<Redirect from="/home" to="/home/main" />
+				<Route path="/home/main" component={Main} />
+				<Route path="/home/table" component={BasicTable} />
+				<Route path="/home/tab" component={Tab} />
+				<Route path="/home/input" component={BasicInput} />
+				<Route path="/home/file" component={FileUpload} />
+				<Route path="/home/echart" component={EChart} />
             </div>
         )
     }
